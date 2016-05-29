@@ -1,66 +1,55 @@
-<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="IE=edge">
-    <meta name="viewport" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta rel="icon" href="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="">
 
-    <title>内容管理平台</title>
-    <link rel="stylesheet" href="/cms/Public/css/bootstrap.min.css">
-    <style>
-        .aa {
-            margin-top:50px;
-        }
-    </style>
+  <title>singcms内容管理平台</title>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-
-    <![endif]-->
+  <!-- Bootstrap core CSS -->
+  <link href="/Public/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="signin.css" rel="stylesheet">
 
 
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+
+  <![endif]-->
 </head>
+
 <body>
+<style>
+  .s_center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+<div class="s_center container col-lg-6 ">
 
-
-<div class="aa">
-
-</div>
-<div class="container">
-    <form class="form-horizontal" action="<?php echo U('Login/loginVolidate');?>">
-        <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Username</label>
-            <div class="col-sm-10">
-                <input type="text" name="username" class="form-control" id="inputEmail3" placeholder="username">
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-            <div class="col-sm-10">
-                <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox"> Remember me
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Sign in</button>
-            </div>
-        </div>
+    <form class="form-signin" enctype="multipart/form-data"  method="post">
+      <h2 class="form-signin-heading">请登录</h2>
+      <label class="sr-only">用户名</label>
+      <input type="text"  class="form-control" name="username" placeholder="请填写用户名" required autofocus>
+      <br />
+      <label  class="sr-only">密码</label>
+      <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" required>
+      <br />
+      <button class="btn btn-lg btn-primary btn-block" type="submit" >登录</button>
     </form>
 
-</div>
-
-
+</div> <!-- /container -->
+<script src="/Public/js/jquery.js"></script>
+<script src="/Public/js/dialog/layer.js"></script>
+<script src="/Public/js/dialog.js"></script>
+<script src="/Public/js/admin/login.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
 </html>
